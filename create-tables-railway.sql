@@ -1,8 +1,4 @@
--- Создание базы данных (если не существует)
-CREATE DATABASE IF NOT EXISTS tours_db;
-
--- Используем базу данных
-USE tours_db;
+-- Создание таблиц для Railway (база данных уже создана)
 
 -- Таблица администраторов
 CREATE TABLE IF NOT EXISTS admins (
