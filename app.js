@@ -17,6 +17,23 @@ app.use(cors({
     credentials: true
 }));
 
+app.use((req, res, next) => {
+    res.setHeader(
+        'Content-Security-Policy',
+        "default-src 'self'; " +
+        "script-src 'self' 'unsafe-inline'; " +
+        "style-src 'self' 'unsafe-inline'; " +
+        "img-src 'self' data: blob: https:; " +
+        "font-src 'self' data:; " +
+        "connect-src 'self' https:;" +
+        "frame-ancestors 'none';"
+    );
+    res.setHeader('Access-Control-Allow-Credentials', 'true');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+    
+    next();
+});
+
 const db = mysql.createPool({
     host: process.env.DB_HOST || 'localhost',
     user: process.env.DB_USER || 'root',
@@ -490,16 +507,33 @@ app.delete('/api/tours/:id', authMiddleware, requireAdmin, async (req, res) => {
     }
 });
 
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'main.html'));
+});
+
+app.get('/main.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'main.html'));
+});
+
+app.get('/login.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'login.html'));
+});
+
+app.get('/register.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'register.html'));
+});
+
+app.get('/:page', (req, res) => {
+    const page = req.params.page;
+    if (page.includes('.html') || page.includes('.css') || page.includes('.js') || page.includes('.png') || page.includes('.jpg')) {
+        next();
+    } else {
+        res.sendFile(path.join(__dirname, 'public', 'main.html'));
+    }
+});
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-    console.log(`Server listening on http://localhost:${PORT}`);
-    const url = `http://localhost:${PORT}/main.html`;
-
-    if (process.platform === 'win32') {
-        exec(`start "" "${url}"`, (err) => { if (err) console.error('Failed to open browser on Windows:', err); });
-    } else if (process.platform === 'darwin') {
-        exec(`open "${url}"`, (err) => { if (err) console.error('Failed to open browser on macOS:', err); });
-    } else {
-        exec(`xdg-open "${url}"`, (err) => { if (err) console.error('Failed to open browser on Linux:', err); });
-    }
+    console.log(`Server running on port ${PORT}`);
+    console.log(`Open your browser to: http://localhost:${PORT}`);
 });
