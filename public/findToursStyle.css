@@ -1,0 +1,38 @@
+.searchDiv {
+    display: flex;
+    justify-content:center;
+    gap: 20px;
+    padding: 20px;
+}
+
+#searchInput {
+    border: solid;
+    border-width: 3px;
+    border-color: #000000;
+    border-radius: 7px;
+    width: 40%;
+    font-size: 26px;
+}
+
+#searchButton {
+    border: none;
+    border-radius: 7px;
+    font-size: 26px;
+    background-color: #22c55e;
+    color: #ffffff;
+    padding: 5px;
+    box-shadow: 0 2px 8px rgba(34, 197, 94, 0.2);
+}
+
+#searchButton:hover {
+    transition-duration: 0.25s;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+main h1 {
+    text-align: center;
+}
+
+
+

@@ -1,0 +1,134 @@
+body {
+    background-image: url('images/loginbg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: 50%;
+    background-position-y: 50%;
+    backdrop-filter: brightness(0.45) blur(5px);
+    margin-bottom: 50px;
+}
+
+main {
+    padding-bottom: 20%;
+}
+
+.logInContainer {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    padding: 20px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:15px;
+    border:none;
+    border-radius:13px;
+    position:relative;
+    justify-self:center;
+    align-self:self-end;
+    margin-top: 10%;
+}
+    .logInContainer label {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 5px;
+        display: block;
+        text-align: left;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .logInContainer .form-field {
+        width: 100%;
+        max-width: 350px;
+        margin-bottom: 15px;
+    }
+
+    .logInContainer label {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 8px;
+        display: block;
+        text-align: left;
+    }
+
+    .logInContainer input {
+        border: solid;
+        height: 45px;
+        border-width: 2px;
+        border-color: rgba(0, 0, 0, 0.15);
+        border-radius: 7px;
+        width: 100%;
+        padding: 0 15px;
+        font-size: 16px;
+        box-sizing: border-box;
+    }
+
+    #formButtons {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-top: 20px;
+    }
+
+#logInTitle {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#logInFormButton {
+    border: none;
+    border-radius: 7px;
+    font-size: 18px;
+    padding: 12px 25px;
+    margin: 5px;
+    background-color: #22c55e;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
+    cursor: pointer;
+    min-width: 120px;
+}
+
+#logInFormButton:hover {
+    transition-duration: 0.25s;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+#resetFormButton {
+    border: solid;
+    border-width: 2px;
+    border-color: rgba(0, 0, 0, 0.15);
+    border-radius: 7px;
+    font-size: 16px;
+    padding: 8px 15px;
+    margin: 5px;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+    #resetFormButton:hover {
+        transition-duration: 0.25s;
+        transform: scale(1.05);
+        cursor: pointer;
+    }
+
+#logOutButton {
+    border: 2px solid #000000;
+    border-radius: 7px;
+    font-size: 16px;
+    padding: 8px 15px;
+    margin: 5px;
+    background-color: #ffffff;
+    color: #000000;
+    cursor: pointer;
+}
+
+#logOutButton:hover {
+    transition-duration: 0.25s;
+    transform: scale(1.05);
+    cursor: pointer;
+}

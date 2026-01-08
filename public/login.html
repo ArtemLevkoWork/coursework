@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="logInStyle.css">
+    <title>ARTEM LEVKO TRAVEL - Вход</title>
+</head>
+<body>
+    <header class="headerV">
+        <a href="main.html" class="logo-link">
+            <img src="images/footerDec.png" alt="ARTEM LEVKO TRAVEL Logo" class="logo-image">
+        </a>
+        <nav id="headerNav">
+            <ul id="navList">
+                <li><a href="findTours.html">Найти туры</a></li>
+                <li> <a href="login.html">Войти</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="logInContainer">
+            <h1 id="logInTitle">Вход</h1>
+            <div id="formDiv">
+                <form id="logInForm" action="" method="post">
+                    <div class="form-field">
+                        <label for="nameInput">Имя:</label>
+                        <input id="nameInput" name="nameInput" type="text">
+                    </div>
+                    <div class="form-field">
+                        <label for="emailInput">Электронная почта:</label>
+                        <input id="emailInput" name="emailInput" type="email">
+                    </div>
+                    <div class="form-field">
+                        <label for="passwordInput">Пароль:</label>
+                        <input id="passwordInput" name="passwordInput" type="password">
+                    </div>
+                </form>
+            </div>
+            <div id="formButtons">
+                <button id="resetFormButton" form="logInForm" type="reset">
+                    сброс
+                </button>
+                <button id="logInFormButton" form="logInForm" type="submit">
+                    войти
+                </button>
+                <button id="logOutButton">Выйти</button>
+            </div>
+        </div>
+        </div>
+    </main>
+    <footer class="footerV">
+        <div class="footerLeft">
+            <h3 id="emailFooter">Электронная почта</h3>
+            <h4 id="emailTextFooter">ArtemLevkoTravel@gmail.com</h4>
+            <h1 id="brandNameFooter"><span style="color: #000000;">ARTEM LEVKO</span> <span style="color: #2d5a27;">TRAVEL</span></h1>
+            <p id="rightsReserved"> ⓒ 2025 ARTEM LEVKO TRAVEL. Все права защищены.</p>
+        </div>
+        <div class="footerRight">
+            <!-- Логотип будет в хедере -->
+        </div>
+    </footer>
+    <script src="login.js"></script>
+</body>
+</html>

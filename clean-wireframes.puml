@@ -1,0 +1,80 @@
+@startuml Диаграмма Е.1 – Главная страница
+title Диаграмма Е.1 – Главная страница
+
+rectangle "ХЕДЕР" as header #BLACK
+
+rectangle "HERO-СЕКЦИЯ\n\nЗАГОЛОВОК\nПОДЗАГОЛОВОК\nКНОПКИ" as hero
+
+rectangle "КАТАЛОГ ТУРОВ\n\nКАРТОЧКА ТУРА 1\nКАРТОЧКА ТУРА 2\nКАРТОЧКА ТУРА 3" as catalog
+
+rectangle "ФУТЕР" as footer
+
+header --> hero : расположен сверху
+hero --> catalog : под hero-секцией
+catalog --> footer : внизу страницы
+
+note right of header : Черная полоска вверху\nс логотипом и меню
+note right of hero : Большая секция с призывом\nк действию и изображениями
+note right of catalog : Сетка из карточек туров
+note right of footer : Информация внизу страницы
+@enduml
+
+@startuml Диаграмма Е.2 – Страница поиска
+title Диаграмма Е.2 – Страница поиска туров
+
+rectangle "ХЕДЕР" as header #BLACK
+
+rectangle "ПАНЕЛЬ ПОИСКА\n\nСТРОКА ПОИСКА\nФИЛЬТРЫ" as search
+
+rectangle "СПИСОК ТУРОВ\n\nКАРТОЧКА ТУРА 1\nКАРТОЧКА ТУРА 2\nКАРТОЧКА ТУРА 3\nКАРТОЧКА ТУРА 4" as tours
+
+header --> search
+search --> tours
+
+note right of header : Навигация
+note right of search : Поиск и фильтры
+note right of tours : Список доступных туров
+@enduml
+
+@startuml Диаграмма Е.3 – Страница входа
+title Диаграмма Е.3 – Страница аутентификации
+
+rectangle "ХЕДЕР" as header #BLACK
+
+rectangle "ФОРМА ВХОДА\n\nЗАГОЛОВОК\nПОЛЕ ИМЯ\nПОЛЕ EMAIL\nПОЛЕ ПАРОЛЬ\nКНОПКИ" as login
+
+header --> login
+
+note right of header : Навигация сайта
+note right of login : Форма для входа/регистрации
+@enduml
+
+@startuml Диаграмма Е.4 – Админ-панель
+title Диаграмма Е.4 – Административная панель
+
+rectangle "ХЕДЕР" as header #BLACK
+
+rectangle "УПРАВЛЕНИЕ ЗАЯВКАМИ\n\nСТАТИСТИКА\nСПИСОК ЗАЯВОК" as requests
+
+rectangle "УПРАВЛЕНИЕ ТУРАМИ\n\nСПИСОК ТУРОВ\nДОБАВИТЬ ТУР" as tours
+
+header --> requests
+header --> tours
+
+note right of header : Навигация
+note right of requests : Работа с заявками пользователей
+note right of tours : Управление каталогом туров
+@enduml
+
+@startuml Диаграмма Е.5 – Модальные окна
+title Диаграмма Е.5 – Всплывающие окна
+
+rectangle "МОДАЛЬНОЕ ОКНО ДЕТАЛЕЙ\n\nИЗОБРАЖЕНИЕ\nНАЗВАНИЕ ТУРА\nОПИСАНИЕ\nИНФОРМАЦИЯ\nКНОПКИ ДЕЙСТВИЙ" as main_modal
+
+rectangle "ФОРМА ОТЗЫВА\n\nРЕЙТИНГ\nТЕКСТ ОТЗЫВА\nКНОПКА ОТПРАВИТЬ" as review_form
+
+main_modal --> review_form : содержит
+
+note right of main_modal : Основное модальное окно\nс деталями тура
+note right of review_form : Форма для написания отзыва
+@enduml

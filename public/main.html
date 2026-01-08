@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="mainStyle.css">
+    <title>ARTEM LEVKO TRAVEL</title>
+</head>
+<body>
+    <header class="headerV">
+        <a href="main.html" class="logo-link">
+            <img src="images/footerDec.png" alt="ARTEM LEVKO TRAVEL Logo" class="logo-image">
+        </a>
+        <nav id="headerNav">
+            <ul id="navList">
+                <li><a href="findTours.html">Найти туры</a></li>
+                <li> <a href="login.html">Войти</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="mainM">
+        <div class="container">
+            <article class="heroFindTours">
+            <div class="heroFTLeft">
+                <h2 id="title">Найдите идеальный поход для приключений</h2>
+                <p>
+                    Множество увлекательных походов по
+                    самым интересным местам Беларуси здесь!
+                </p>
+                <div id="heroFTButtons">
+                    <button id="findToursButton">найти сейчас</button>
+                    <button id="logInButton">войти</button>
+                </div>
+            </div>
+            <div id="heroFTImages">
+                <img id="heroFTImage1" src="images/heroFTImage.jpg">
+                <img id="heroFTImage2" src="images/heroFTImage2.jpg">
+                <img id="heroFTImage3" src="images/heroFTImage3.jpg">
+            </div>
+        </article>
+        <hr>
+        <article id="trendingTours" class="toursGrid"></article>
+        <div id="toursModal"></div>
+        </div>
+    </main>
+
+    <footer class="footerV">
+        <div class="footerLeft">
+            <h3 id="emailFooter">Электронная почта</h3>
+            <h4 id="emailTextFooter">ArtemLevkoTravel@gmail.com</h4>
+            <h1 id="brandNameFooter"><span style="color: #000000;">ARTEM LEVKO</span> <span style="color: #2d5a27;">TRAVEL</span></h1>
+            <p id="rightsReserved"> ⓒ 2025 ARTEM LEVKO TRAVEL. Все права защищены.</p>
+        </div>
+        <div class="footerRight">
+            <!-- Логотип будет в хедере -->
+        </div>
+    </footer>
+    <script src="pageScripts.js"></script>
+    <script src="findTours.js"></script>
+</body>
+</html>

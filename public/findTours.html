@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="findToursStyle.css">
+    <title>ARTEM LEVKO TRAVEL - Поиск туров</title>
+</head>
+<body>
+    <header class="headerV">
+        <a href="main.html" class="logo-link">
+            <img src="images/footerDec.png" alt="ARTEM LEVKO TRAVEL Logo" class="logo-image">
+        </a>
+        <nav id="headerNav">
+            <ul id="navList">
+                <li><a href="findTours.html">Найти туры</a></li>
+                <li> <a href="login.html">Войти</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="searchDiv">
+            <input type="text"
+                   id="searchInput"
+                   placeholder="Поиск туров..."
+                   aria-label="Поиск туров" />
+            <button id="searchButton" aria-label="Поиск">Поиск</button>
+        </div>
+        <hr>
+        <h1 id="trendingTitle">Популярные туры</h1>
+        <article id="trendingTours" class="toursGrid"></article>
+        <hr>
+        <h1 id="newTitle">Новые туры</h1>
+        <article id="newTours" class="toursGrid"></article>
+        <div id="toursModal"></div>
+        </div>
+    </main>
+    <footer class="footerV">
+        <div class="footerLeft">
+            <h3 id="emailFooter">Электронная почта</h3>
+            <h4 id="emailTextFooter">ArtemLevkoTravel@gmail.com</h4>
+            <h1 id="brandNameFooter"><span style="color: #000000;">ARTEM LEVKO</span> <span style="color: #2d5a27;">TRAVEL</span></h1>
+            <p id="rightsReserved"> ⓒ 2025 ARTEM LEVKO TRAVEL. Все права защищены.</p>
+        </div>
+        <div class="footerRight">
+            <!-- Логотип будет в хедере -->
+        </div>
+    </footer>
+    <script src="findTours.js"></script>
+</body>
+</html>
